@@ -1,32 +1,66 @@
-.App {
+
+
+h1, h4 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.status {
+  margin-bottom: 10px;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.square {
+  margin-top: 15px;
+  background: #fff;
+  border: 1px solid bold #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 50px;
+  height: 50px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 50px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.game-info {
+  margin-left: 20px;
 }
+
+.Ascending {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.Descending {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: left;
+}
+
 
 @keyframes App-logo-spin {
   from {
